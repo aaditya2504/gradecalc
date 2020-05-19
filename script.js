@@ -23,11 +23,12 @@ function subScore(name, event) {
 
 function getGrade(perc) {
     let grades;
-    if(perc <= 100  && perc >= 80){
+    let score = parseInt(perc)
+    if(score <= 100  && score >= 80){
         grades = 'A';
-      }else if(perc <= 79  && perc >= 60){
+      }else if(score <= 79  && score >= 60){
          grades = 'B';
-      }else if(perc <= 59  && perc >= 40){
+      }else if(score <= 59  && score >= 40){
          grades = 'C';
       }else{
          grades = 'F';
@@ -49,6 +50,6 @@ function btnSubmit(event) {
         const gradeDOM = document.getElementById('grade');
         paraDOM.style.display = 'block';
         marksDOM.innerHTML = `Out of 500 your total score is ${res} and percentage is ${(res/5)}%`
-        gradeDOM.innerHTML = `Your grade is ${getGrade(res)}. You are ${res <= 33 ? 'FAIL' : 'PASS'}`
+        gradeDOM.innerHTML = `Your grade is ${getGrade(res/5)}. You are ${(res/5) <= 33 ? 'FAIL' : 'PASS'}`
     }
 }
