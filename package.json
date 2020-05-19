@@ -1,0 +1,21 @@
+{
+  "name": "gradecalc",
+  "version": "1.0.0",
+  "description": "Grade Calculator for calculating marks",
+  "main": "script.js",
+  "homepage": "https://aaditya2504.github.io/gradecalc/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "parcel build index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Aditya",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "gh-pages": "^2.2.0",
+    "parcel": "^1.12.4"
+  }
+}
